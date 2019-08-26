@@ -17,6 +17,15 @@ export class AppComponent implements OnInit {
     this.folder[index].showDetail = !this.folder[index].showDetail;
 
   }
+  deleteQuote(isComplete, index){
+    if (isComplete) {
+      let toDelete = confirm(`Are you sure you want to delete ${this.folder[index].description}?`)
+
+      if (toDelete){
+        this.folder.splice(index,1)
+      }
+    }
+  }
 
   constructor(){ }
   

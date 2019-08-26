@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import {FirstQuote} from '../first-quote'
 
 
@@ -17,6 +17,9 @@ export class QuoteDetailsComponent implements OnInit {
   //   this.folder[index].showDetail = !this.folder[index].showDetail;
 
   // }
+  quoteDelete(complete:boolean){
+    // this.isComplete.emit(complete);
+  }
 
   @Input()folder: FirstQuote
   constructor() { }

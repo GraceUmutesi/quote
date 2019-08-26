@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+
 .origin{
     background-color: burlywood;
-    background-size: cover;
+    background-size: contain;
 }
 .container{
     background-image: url("./assets/background-image.jpg");
