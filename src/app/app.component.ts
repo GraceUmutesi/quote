@@ -13,4 +13,8 @@ export class AppComponent {
     new FirstQuote(3,'You get in life what you have the courage to ask for.','written by Oprah Winfrey'),
   ];
   
+  toggleMore(index){
+    this.folder[index].showDetail = !this.folder[index].showDetail;
+
+  }
 }

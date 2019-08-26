@@ -1,13 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div >
+<div class="well" >
   <h1 style="text-align:center">Welcome to Grace's quotes!</h1>
   <hr>
-  <ul>
-    <div *ngFor='let unique of folder;let i= index'>
-      <li>{{unique.description}}</li>
-      <button (click)='toggleMore(i)'>More</button>
-      <app-quote-details *ngIf='unique.showDetail' [FirstQuote]='unique'></app-quote-details>
+  <div class="row">
+    <div class="col-md-6">
+      <ul>
+        <div *ngFor='let unique of folder;let i= index'>
+          <li>{{unique.description}}</li>
+          <button (click)='toggleMore(i)'>More</button>
+          <app-quote-details ></app-quote-details>
+        </div>
+      </ul>
+      <p *ngIf='folder.length>30'>You have added enough quotes</p>
     </div>
-  </ul>
-  <!-- <p *ngIf='folder.length>30'>You have added enough quotes</p> -->
+    <div class="col-md-6">
+        <app-quote-form></app-quote-form>
+
+    </div>
+  </div>
 </div> 
