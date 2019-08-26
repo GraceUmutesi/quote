@@ -8,9 +8,9 @@ import { FirstQuote } from './first-quote';
 })
 export class AppComponent {
   folder: FirstQuote []=[
-    {id:1, description:"If you can dream it, you can do it."},
-    {id:2,description:"Never let anyone treat you like a yellow starbust,you're a pink starbust."},
-    {id:3,description:"You get in life what you have the courage to ask for."},
+    new FirstQuote (1, 'If you can dream it, you can do it.','written by Billy cannolly.'),
+    new FirstQuote(2,"Never let anyone treat you like a yellow starbust,you're a pink starbust.",'written by anonymous.'),
+    new FirstQuote(3,'You get in life what you have the courage to ask for.','written by Oprah Winfrey'),
   ];
   
 }

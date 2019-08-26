@@ -3,9 +3,11 @@
   <h1 style="text-align:center">Welcome to Grace's quotes!</h1>
   <hr>
   <ul>
-    <li *ngFor='let unique of folder'>
-      {{unique.description}}
-    </li>
+    <div *ngFor='let unique of folder;let i= index'>
+      <li>{{unique.description}}</li>
+      <button (click)='toggleMore(i)'>More</button>
+      <app-quote-details *ngIf='unique.showDetail' [FirstQuote]='unique'></app-quote-details>
+    </div>
   </ul>
-  <p *ngIf='folder.length>10'>You have added enough quotes</p>
+  <!-- <p *ngIf='folder.length>30'>You have added enough quotes</p> -->
 </div> 
