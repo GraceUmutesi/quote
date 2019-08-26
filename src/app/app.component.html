@@ -8,7 +8,7 @@
         <div *ngFor='let unique of folder;let i= index'>
           <li>{{unique.description}}</li>
           <button (click)='toggleMore(i)'>More</button>
-          <app-quote-details ></app-quote-details>
+          <app-quote-details *ngIf='folder.showDetail' [folder]='unique' ></app-quote-details>
         </div>
       </ul>
       <p *ngIf='folder.length>30'>You have added enough quotes</p>
@@ -19,3 +19,5 @@
     </div>
   </div>
 </div> 
+
+

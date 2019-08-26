@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FirstQuote } from './first-quote';
 
 @Component({
@@ -6,7 +6,7 @@ import { FirstQuote } from './first-quote';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   folder: FirstQuote []=[
     new FirstQuote (1, 'If you can dream it, you can do it.','written by Billy cannolly.'),
     new FirstQuote(2,"Never let anyone treat you like a yellow starbust,you're a pink starbust.",'written by anonymous.'),
@@ -17,4 +17,13 @@ export class AppComponent {
     this.folder[index].showDetail = !this.folder[index].showDetail;
 
   }
+
+  constructor(){ }
+  
+  ngOnInit(){
+
+  }
 }
+
+
+
