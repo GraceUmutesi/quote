@@ -1,7 +1,7 @@
-<p>
+<div>
     {{folder.detail}}
-    <button (click)= 'deleteQuote(true)'>Complete</button>
-    <!-- <button (click)= 'quoteDelete(true)'>Delete Quote</button> -->
-</p>
-<!-- <p>{{goal.description}}</p>
-<button (click)= 'goalComplete(true)'>Complete</button> -->
+    <button (click)= 'deleteQuote(true)'  class="btn btn-outline-danger">Delete</button>
+    <p>This quote is valid for {{folder.completeDate|dateTime}} days</p>
+   
+</div>
+

@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { DateTimePipe } from './date-time.pipe';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
     AppComponent,
     QuoteDetailsComponent,
     QuoteFormComponent,
+    DateTimePipe,
   
   ],
   imports: [
