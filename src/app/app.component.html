@@ -10,7 +10,9 @@
           <div style="background-color:black;opacity: 0.9;" *ngFor='let unique of folder;let i= index'>
             <li>{{unique.description}}</li>
             <button (click)='toggleMore(i)'>More</button>
-            <app-quote-details *ngIf='folder.showDetail' [folder]='unique' (isComplete) = 'deleteQuote($event,i)' ></app-quote-details>
+            <app-quote-details *ngIf='folder.showDetail' [folder]='unique' (isComplete) = 'deleteQuote($event,i)' ></app-quote-details><br>
+            <button style="margin-right:2px" class="btn btn-primary"> upVote <span >0</span></button>
+            <button  class="btn btn-primary"> downVote <span>0</span></button>
           </div>
         </ul>
         <p *ngIf='folder.length>30'>You have added enough quotes</p>
