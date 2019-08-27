@@ -1,4 +1,4 @@
-# Quote
+# myQuotes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
 
@@ -8,7 +8,7 @@ This project is an application that allows the user to view quotes and add some 
 
 ## Technology and tools used
 
-Angular.js, Node.js, Bootstrap, vs code as editor.
+Angular.js, Node.js, Typescript.js, Bootstrap, vs code as editor.
 
 ## Development server
 
