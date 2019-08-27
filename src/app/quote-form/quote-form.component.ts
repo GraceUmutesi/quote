@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirstQuote } from '../first-quote'
 
 @Component({
   selector: 'app-quote-form',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuoteFormComponent implements OnInit {
 
+  newQuote = new FirstQuote(0,"","");//new Date() to be added
   constructor() { }
 
   ngOnInit() {

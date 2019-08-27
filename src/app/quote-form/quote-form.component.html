@@ -1,19 +1,23 @@
 <div class="container">
     <h4>ADD A QUOTE</h4>
     <hr>
-    <form>
+    <form #quoteForm='ngForm'>
         <div class="form-group">
-            <label for="details">enter a quote here: </label>
-            <textarea type="text" id="details" class="form-control" placeholder=" your quote" required></textarea>
+            <label for="description">enter a quote here: </label>
+            <textarea type="text" id="description" [(ngModel)]="newQuote.description" description="description" class="form-control" placeholder=" your quote" required></textarea>
         </div>
         <div class="form-group">
-            <label for="names">enter the author's name: </label>
-            <input type="text" id="names" class="form-control" placeholder="Author name" required>
+            <label for="detail">enter the author's name: </label>
+            <input type="text" id="detail" class="form-control" placeholder="Author name" required>
         </div>
         <div class="form-group">
             <label for="words">enter your name: </label>
             <input type="text" id="words" class="form-control" placeholder="enter your full name" required>
         </div>
+        <button style="margin-bottom:1%" type="submit" class="btn btn-success">Add: </button>
+
     </form>
     
 </div>
+
+
