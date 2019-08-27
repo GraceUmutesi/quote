@@ -2,12 +2,12 @@
 
 <div class="origin">
   <div class="contain" >
-    <h1 style="text-align:center">Cheerful quotes!</h1>
+    <h1 style="text-align:center;text-decoration: underline">Cheerful quotes!</h1>
     <hr>
     <div class="row">
       <div class="col-md-6">
         <ul>
-          <div style="background-color:black;opacity: 0.9;" *ngFor='let unique of folder;let i= index'>
+          <div style="background-color:black;opacity: 0.8;" *ngFor='let unique of folder;let i= index'>
             <li>{{unique.description}} on {{unique.completeDate|date|uppercase}}</li>
             <button (click)='toggleMore(i)'>More</button> 
             <app-quote-details *ngIf='unique.showDetail' [folder]='unique' (isComplete) = 'deleteQuote($event,i)' ></app-quote-details><br>
@@ -19,7 +19,7 @@
         <p *ngIf='folder.length>30'>You have added enough quotes</p>
       </div>
       <div class="col-md-6">
-        <div style="background-color:black;opacity: 0.9;">
+        <div style="background-color:black;opacity: 0.8;margin-bottom: 35%;margin-right:3%;">
           <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
         </div>
       </div>

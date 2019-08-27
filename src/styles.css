@@ -1,16 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
-/* 
-.origin{
-    background-color: burlywood;
-    background-size: contain;           
-} */
+
 .contain{
     background-image: url("./assets/background-image.jpg");
     color: white;
     background-repeat: no-repeat;
     background-size: cover; 
-    /* height:100%;
-    width: 180%; */
+}
+h4{
+    text-align: center;
+    text-decoration:underline;
 }
 
