@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {FirstQuote} from '../first-quote'
 
 
@@ -17,11 +17,16 @@ export class QuoteDetailsComponent implements OnInit {
   //   this.folder[index].showDetail = !this.folder[index].showDetail;
 
   // }
-  quoteDelete(complete:boolean){
-    // this.isComplete.emit(complete);
-  }
+  // quoteDelete(complete:boolean){
+  //   this.isComplete.emit(complete);
+  // }
 
-  @Input()folder: FirstQuote
+  @Input()folder: FirstQuote;
+  @Output() isComplete = new EventEmitter<boolean>();
+  deleteQuote(complete:boolean){
+        this.isComplete.emit(complete);
+      }
+
   constructor() { }
 
   ngOnInit() {
@@ -29,3 +34,18 @@ export class QuoteDetailsComponent implements OnInit {
 
 }
 
+
+// export class GoalDetailComponent implements OnInit {
+
+//   @Input() goal: Goal;
+//   @Output() isComplete = new EventEmitter<boolean>();
+
+//   goalComplete(complete:boolean){
+//     this.isComplete.emit(complete);
+//   }
+//   constructor() { }
+
+//   ngOnInit() {
+//   }
+
+// }

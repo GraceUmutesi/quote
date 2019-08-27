@@ -8,7 +8,7 @@
       <div class="col-md-6">
         <ul>
           <div style="background-color:black;opacity: 0.9;" *ngFor='let unique of folder;let i= index'>
-            <li>{{unique.description}}</li>
+            <li>{{unique.description}} on {{unique.completeDate|date|uppercase}}</li>
             <button (click)='toggleMore(i)'>More</button>
             <app-quote-details *ngIf='unique.showDetail' [folder]='unique' (isComplete) = 'deleteQuote($event,i)' ></app-quote-details><br>
             <button style="margin-right:2px" class="btn btn-primary"> upVote <span >0</span></button>
@@ -32,7 +32,9 @@
   <div *ngFor='let goal of goals;let i = index'>
     <li>{{goal.name}}</li>
     <button (click)='toggleDetails(i)'>Toggle Details</button>
-    <app-goal-detail *ngIf='goal.showDescription' [goal]='goal'></app-goal-detail>
+    <app-goal-detail *ngIf='goal.showDescription' [goal]='goal' (isComplete) = 'completeGoal($event,i)'></app-goal-detail>
   </div>
 </ul>
 <p *ngIf='goals.length > 5'>You have too many goals</p> -->
+<!-- <div *ngFor='let goal of goals;let i = index'>
+    <li appStrikethrough>{{goal.name}} due on {{goal.completeDate|date|uppercase}}</li>   -->
