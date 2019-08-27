@@ -4,3 +4,5 @@ export class FirstQuote  {
       this.showDetail=false;
     }
   }
+
+  
