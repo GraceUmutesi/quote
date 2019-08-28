@@ -30,7 +30,6 @@ export class AppComponent implements OnInit {
   addNewQuote(unique){
     let quoteLength = this.folder.length;
     unique.id = quoteLength+1;
-    // goal.completeDate = new Date(goal.completeDate)
     this.folder.push(unique)
   }
   upVote=0;
